@@ -22,7 +22,7 @@ struct node *insert_front(void *list, int *data){
 	hd -> next = list;
 	return hd;
 }
-//===================================================================== free_list
+//====================================================================== free_list
 struct node *free_list(struct node *list){
     struct node *tmp; //helps w iteration
 	while (list){
@@ -32,7 +32,7 @@ struct node *free_list(struct node *list){
 	}
 	return list;
 }
-//===================================================================== main
+//====================================================================== main
 int main(){
 	struct node *head;
 	struct node *n1 = (struct node *)malloc(sizeof(struct node));
@@ -66,7 +66,7 @@ int main(){
 
 	return 0;
 }
-//===================================================================== testing code output
+//====================================================================== testing code output
 /* PRINT OUTPUT:
 ----------------------------* 
 print_list: 
