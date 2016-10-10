@@ -5,15 +5,15 @@ struct node { int i; struct node *next };
 //===================================================================== print_list
 void print_list( struct node *list ){
 	printf("[");
-	if (list == 0) //if list is empty then print []
-		printf("] \n");
-	else {
+	if (list){ 
 		while (list -> next) { //fixes end comma problem
 			printf( "%d,", list -> i);
 			list = list -> next;
 		}
 		printf("%d] \n", list -> i);
 	}
+	else
+		printf("] \n"); //if list is empty
 }
 //===================================================================== insert_front
 struct node *insert_front(void *list, int *data){
