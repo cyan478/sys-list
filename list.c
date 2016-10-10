@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 struct node { int i; struct node *next };
-//================================================================= print_list
+//===================================================================== print_list
 void print_list( struct node *list ){
 	printf("[");
 	if (list == 0) //if list is empty then print []
@@ -15,14 +15,14 @@ void print_list( struct node *list ){
 		printf("%d] \n", list -> i);
 	}
 }
-//================================================================= insert_front
+//===================================================================== insert_front
 struct node *insert_front(void *list, int *data){
 	struct node *hd = (struct node *)malloc(sizeof(struct node)); //new head
 	hd -> i = data;
 	hd -> next = list;
 	return hd;
 }
-//================================================================= free_list
+//===================================================================== free_list
 struct node *free_list(struct node *list){
     struct node *tmp; //helps w iteration
 	while (list){
@@ -32,7 +32,7 @@ struct node *free_list(struct node *list){
 	}
 	return list;
 }
-//================================================================= main
+//===================================================================== main
 int main(){
 	struct node *head;
 	struct node *n1 = (struct node *)malloc(sizeof(struct node));
@@ -66,7 +66,7 @@ int main(){
 
 	return 0;
 }
-//================================================================= testing code output
+//===================================================================== testing code output
 /* PRINT OUTPUT:
 ----------------------------* 
 print_list: 
